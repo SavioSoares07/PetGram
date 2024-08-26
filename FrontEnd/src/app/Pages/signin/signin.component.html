@@ -1,1 +1,49 @@
-<h1>Signin</h1>
+<app-header-account></app-header-account>
+<main>
+  <div class="container">
+    <h1>Entrar</h1>
+    <i class="fa-solid fa-shield-cat"></i>
+
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="petgram@gmail.com" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input
+          matInput
+          [type]="hide() ? 'password' : 'text'"
+          placeholder="********"
+        />
+        <button
+          class="password-hide"
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <p class="forget-password">
+        <a href="#">Esqueceu sua senha ? <b>Clique aqui</b></a>
+      </p>
+
+      <div class="example-button-row">
+        <button mat-flat-button>Entrar</button>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="link-register">
+        <p>Ainda não tem conta ?</p>
+        <div class="example-button-row">
+          <button mat-flat-button>Criar conta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

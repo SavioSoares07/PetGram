@@ -5,25 +5,18 @@ import {
   provideClientHydration,
 } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { AnguarMaterialModule } from './angular-material/angular-material.module';
 
 //App
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 //My Imports
-import { Components } from './components/components.module';
 import { PagesModule } from './Pages/pages.module';
+import { AnguarMaterialModule } from './angular-material/angular-material.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AnguarMaterialModule,
-    Components,
-    PagesModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, PagesModule],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })

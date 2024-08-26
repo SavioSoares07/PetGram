@@ -1,0 +1,71 @@
+main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container {
+  height: calc(100% - 300px);
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 50px;
+}
+div.form {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  text-align: center;
+}
+h1 {
+  color: var(--bg-orange);
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+i.fa-shield-cat {
+  font-size: 260px;
+  color: var(--bg-orange);
+}
+input {
+  border-color: var(--bg-orange);
+}
+.form {
+  margin-top: 26px;
+}
+button.password-hide {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.password-hide mat-icon {
+  color: var(--bg-orange);
+}
+
+.password-hide {
+  border: 2px solid var(--bg-orange);
+  border-radius: 50%;
+}
+p.forget-password a {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+div.example-button-row {
+  display: flex;
+  justify-content: center;
+}
+div.example-button-row button {
+  background-color: var(--bg-orange);
+  color: #fff;
+  width: 100%;
+}
+mat-divider {
+  background-color: var(--bg-orange);
+  margin-top: 20px;
+  height: 1px;
+}
+.link-register {
+  margin-top: 15px;
+}
