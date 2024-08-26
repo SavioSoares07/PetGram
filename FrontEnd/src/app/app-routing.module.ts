@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+// Importar os componentes de página
+import { SigninComponent } from './Pages/signin/signin.component';
+import { SignupComponent } from './Pages/signup/signup.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/signin', pathMatch: 'full' },
+  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
