@@ -1,1 +1,74 @@
-<p>signup works!</p>
+<app-header-account></app-header-account>
+<main>
+  <div class="container">
+    <h1>Criar conta</h1>
+    <i class="fa-solid fa-shield-cat"></i>
+
+    <div class="form">
+      <div>
+        <label>Usuário</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Informe o nome de usuário</mat-label>
+          <input required matInput placeholder="Ex. Gabriel_07" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label>Pet</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Informe o nome do pet</mat-label>
+          <input required matInput placeholder="Ex. Gabriel_07" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label>Email</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Informe seu e-mail</mat-label>
+          <input
+            required
+            matInput
+            placeholder="petgram@gmail.com"
+            type="email"
+          />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label>Senha</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Informe sua senha</mat-label>
+          <input
+            required
+            matInput
+            [type]="hide() ? 'password' : 'text'"
+            placeholder="********"
+          />
+          <button
+            class="password-hide"
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="example-button-row">
+        <button routerLink="/singup" mat-flat-button>Criar conta</button>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="link-register">
+        <p>Já tem uma conta ?</p>
+        <div class="example-button-row">
+          <button routerLink="/signin" mat-flat-button>Entrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
