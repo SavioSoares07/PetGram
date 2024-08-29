@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7F40E31A-4DC8-4109-9F8B-289A2057C2B8}|PetGramAPi\\PetGramAPi.csproj|c:\\users\\dsavi\\onedrive\\documentos\\petgram\\backend\\petgramapi\\petgramapi\\controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F40E31A-4DC8-4109-9F8B-289A2057C2B8}|PetGramAPi\\PetGramAPi.csproj|solutionrelative:petgramapi\\controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F40E31A-4DC8-4109-9F8B-289A2057C2B8}|PetGramAPi\\PetGramAPi.csproj|c:\\users\\dsavi\\onedrive\\documentos\\petgram\\backend\\petgramapi\\petgramapi\\communication\\excepetion\\accountexcpetion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F40E31A-4DC8-4109-9F8B-289A2057C2B8}|PetGramAPi\\PetGramAPi.csproj|solutionrelative:petgramapi\\communication\\excepetion\\accountexcpetion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountExcpetion.cs",
-              "DocumentMoniker": "C:\\Users\\dsavi\\OneDrive\\Documentos\\PetGram\\BackEnd\\PetGramAPi\\PetGramAPi\\Communication\\Excepetion\\AccountExcpetion.cs",
-              "RelativeDocumentMoniker": "PetGramAPi\\Communication\\Excepetion\\AccountExcpetion.cs",
-              "ToolTip": "C:\\Users\\dsavi\\OneDrive\\Documentos\\PetGram\\BackEnd\\PetGramAPi\\PetGramAPi\\Communication\\Excepetion\\AccountExcpetion.cs",
-              "RelativeToolTip": "PetGramAPi\\Communication\\Excepetion\\AccountExcpetion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T17:59:47.015Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -45,7 +28,7 @@
               "RelativeDocumentMoniker": "PetGramAPi\\Controllers\\Account.cs",
               "ToolTip": "C:\\Users\\dsavi\\OneDrive\\Documentos\\PetGram\\BackEnd\\PetGramAPi\\PetGramAPi\\Controllers\\Account.cs",
               "RelativeToolTip": "PetGramAPi\\Controllers\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAyAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowC8AAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T17:48:56.691Z",
               "EditorCaption": ""
