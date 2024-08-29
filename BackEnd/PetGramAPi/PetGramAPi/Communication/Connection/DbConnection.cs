@@ -1,8 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace PetGramAPi.Communication.Connection
 {
-    public class DbConnection
+    public class DbConnection : IDisposable
     {
         private readonly MySqlConnection _connection;
 
@@ -16,36 +17,64 @@ namespace PetGramAPi.Communication.Connection
         {
             try
             {
-                _connection.Open();
-                Console.WriteLine("Conexão aberta com sucesso");
+                if (_connection.State == System.Data.ConnectionState.Closed)
+                {
+                    _connection.Open();
+                    Console.WriteLine("Conexão aberta com sucesso");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao conectar: " + ex.Message);
+                // Consider adding logging here
+                throw; // Consider rethrowing or handling the exception appropriately
             }
         }
 
         public void CloseConnection()
         {
-            if (_connection != null && _connection.State == System.Data.ConnectionState.Open)
+            if (_connection.State == System.Data.ConnectionState.Open)
             {
                 _connection.Close();
                 Console.WriteLine("Conexão fechada com sucesso");
             }
         }
 
+        private bool VerificationRegistration(string columnName, string value)
+        {
+            string query = $"SELECT COUNT(1) FROM users WHERE {columnName} = @value";
+            using (MySqlCommand command = new MySqlCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("@value", value);
+                int count = Convert.ToInt32(command.ExecuteScalar());
+                return count > 0;
+            }
+        }
+
+        public bool IsUserRegistered(string username)
+        {
+            return VerificationRegistration("User", username);
+        }
+
+        public bool IsPetRegistered(string petName)
+        {
+            return VerificationRegistration("PetName", petName);
+        }
+
         public bool IsEmailRegistered(string email)
         {
-            string query = "SELECT COUNT(1) FROM users Where Email = @Email";
-            MySqlCommand command = new MySqlCommand(query, _connection);
-            command.Parameters.AddWithValue("@Email", email);
-
-            int countEmail = Convert.ToInt32(command.ExecuteScalar());
-            return countEmail > 0;
+            return VerificationRegistration("Email", email);
         }
+
         public MySqlConnection GetConnection()
         {
             return _connection;
+        }
+
+        public void Dispose()
+        {
+            CloseConnection();
+            _connection?.Dispose();
         }
     }
 }
