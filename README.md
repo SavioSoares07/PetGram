@@ -3,10 +3,10 @@
 O Petgram foi desenvolvido para implementar uma tela de login e uma tela de cadastro, utilizando Angular para o frontend e C# para o backend, com integração ao banco de dados MySQL para gerenciamento eficiente dos dados.
 
 ## Índice
-- [Pré-Requisitos](##Pré-requisitos)
-- [Demonstração](##Demonstração)
-- [Instalação](##Instalação)
-- [Documentação](##Documentação)
+- [Pré-Requisitos](#Pré-requisitos)
+- [Demonstração](#Demonstração)
+- [Instalação](#Instalação)
+- [Documentação](#Documentação)
 
 
 ## Pré-requisitos
