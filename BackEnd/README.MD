@@ -17,4 +17,21 @@ git clone https://github.com/SavioSoares07/PetGram
 
 
 ```
-    
+
+
+## Documentação da API
+
+```http
+  POST /api/account
+```
+
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `user`      | `string` | Nome do usuário |
+| `pet`      | `string` | Nome do Pet |
+| `email`      | `string` | Email do usuário |
+| `password`      | `string` | Senha do usuário |
+
+
