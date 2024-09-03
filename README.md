@@ -19,6 +19,24 @@ Antes de começar, certifique-se de ter instalado:
 - [C#](https://learn.microsoft.com/pt-br/dotnet/csharp/)
 
 
+## Documentação da API
+
+```http
+  POST /api/account
+```
+
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `user`      | `string` | Nome do usuário |
+| `pet`      | `string` | Nome do Pet |
+| `email`      | `string` | Email do usuário |
+| `password`      | `string` | Senha do usuário |
+
+
+
+
 ## Demonstração
 
 ![image](https://github.com/user-attachments/assets/e93533a8-23a1-4adb-ac1d-998b52efe4e5)
